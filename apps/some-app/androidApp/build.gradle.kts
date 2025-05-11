@@ -16,7 +16,7 @@ plugins {
      *
      * 2 errors
      */
-    //alias(android.plugins.android.application)
+    alias(androidLibs.plugins.android.application)
 
 
     /**
@@ -26,7 +26,13 @@ plugins {
      * > The request for this plugin could not be satisfied because the plugin is already on the classpath
      *  with an unknown version, so compatibility cannot be checked.
      */
-    //alias(libs.plugins.android.application)
+//    alias(libs.plugins.android.application)
 
 
+}
+
+// this extension would have name clash with the 'android' version catalog
+android {
+    compileSdk = 31
+    namespace = "com.example"
 }

@@ -10,6 +10,7 @@ pluginManagement {
         }
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev") // JetBrains Compose repository
         mavenCentral() // General-purpose repository
+        maven("https://central.sonatype.com/repository/maven-snapshots") // needed for SNAPSHOT of typesafe-conventions
     }
 }
 
@@ -31,5 +32,6 @@ dependencyResolutionManagement {
 }
 
 plugins {
-    id("dev.panuszewski.typesafe-conventions") version "0.7.1"
+    // the SNAPSHOT version contains a fix
+    id("dev.panuszewski.typesafe-conventions") version "0.7.2-fix-auto-plugin-dependencies-SNAPSHOT"
 }
