@@ -6,8 +6,6 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        // the google repository is needed not only in buildSrc but also in the main build
-        // since we apply the android plugins both from convention plugins and directly
         google {
             mavenContent {
                 includeGroupAndSubgroups("androidx")
@@ -25,10 +23,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 
-    // custom version catalogs must be registered manually (only libs works out of the box)
     versionCatalogs {
-        // the name 'android' is very unfortunate since there is a name clash between extensions registered
-        // by version catalog and the android plugin -> 'android.plugins.*' vs. 'android { compileSdk = ... }'
         create("androidLibs") {
             from(files("gradle/androidLibs.versions.toml"))
         }

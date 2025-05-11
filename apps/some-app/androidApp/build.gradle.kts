@@ -31,7 +31,6 @@ plugins {
 
 }
 
-// this extension would have name clash with the 'android' version catalog
 android {
     compileSdk = 31
     namespace = "com.example"
