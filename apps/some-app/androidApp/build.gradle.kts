@@ -16,7 +16,7 @@ plugins {
      *
      * 2 errors
      */
-    //alias(android.plugins.android.application)
+    alias(androidLibs.plugins.android.application)
 
 
     /**
@@ -29,4 +29,9 @@ plugins {
     //alias(libs.plugins.android.application)
 
 
+}
+
+android {
+    compileSdk = 31
+    namespace = "com.example"
 }
