@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.convention.android)
 
+    // TODO causes "The request for this plugin could not be satisfied because the plugin is already on the classpath with an unknown version, so compatibility cannot be checked."
+    //alias(libs.plugins.kotlin.android)
+
     /**
      * Preferred way: having android libs in the android.versions.toml
      *

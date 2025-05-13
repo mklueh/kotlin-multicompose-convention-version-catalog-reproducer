@@ -25,7 +25,7 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("androidLibs") {
-            from(files("gradle/androidLibs.versions.toml"))
+            from(files("gradle/android.versions.toml"))
         }
     }
 }
